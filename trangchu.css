@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');
+
+:root{
+    --main-color: #d3ad7f;
+    --black: #13131a;
+    --bg:#669966;
+    --boder: .1rem solid rgba(255,255,255,.3);
+}
+
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: #fff;
+    border-radius: 5rem;
+}
+
+body{
+    background: #669966;
+}
+
+section{
+    padding: 2rem 7%;
+}
+
+.heading{
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+}
+
+.heading span{
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .7rem 3rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background: var(--main-color);
+    cursor: pointer;
+}
+
+.btn:hover{
+    letter-spacing: .2rem;
+}
+
+.header{
+    background: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    border-bottom: var(--boder);
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+}
+
+.header .logo img{
+    height: 7rem;
+}
+
+.header .navbar a{
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+.header .navbar a:hover{
+    color: var(--bg);
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+
+.header .icons div{
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.7rem;
+    margin-left: 2rem;
+}
+
+.header .icons div:hover{
+    color: var(--bg);
+}
+
+
+.header .search-form{
+    position: absolute;
+    top: 115%; right: 7%;
+    background: #fff;
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    transform: scaleX(0);
+    transform-origin: top;
+}
+
+.header .search-form.active{
+    transform: scaleY(1);
+}
+
+.header .search-form input{
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color: var(--black);
+    padding: 1rem;
+    text-transform: none;
+}
+
+.header .search-form label{
+    cursor: pointer;
+    font-size: 2rem;
+    margin-right: 1.5rem;
+    color: var(--black);
+}
+
+.header .search-form label:hover{
+    color: var(--main-color);
+}
+  
+
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(trangchu2.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.about .row{
+    display: flex;
+    align-items: center;
+    background: #fff;
+    flex-wrap: wrap;
+}
+
+.about .row .image{
+    flex: 1 1 45rem;
+}
+
+.about .row .image img{
+    width: 100%;
+}
+
+.about .row .content{
+    flex: 1 1 45rem;
+    padding: 2rem;
+}
+
+.about .row .content h3{
+    font-size: 3rem;
+    color: var(--black);
+}
+
+.about .row .content p{
+    font-size: 1.6rem;
+    color: var(--black);
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+
+.products .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.products .box-container .box{
+    text-align: center;
+    border: var(--boder);
+    padding: 2rem;
+}
+
+.products .box-container .box .image{
+    padding: 2.5rem 0;
+}
+
+.products .box-container .box .image img{
+    width: 100%;
+    height: 18rem;
+}
+
+.products .box-container .box .content h3{
+    color: var(--black);
+    font-size: 2.5rem;
+}
+
+.products .box-container .box .content .stars{
+    padding: 1.5rem;
+}
+
+.products .box-container .box .content .stars i{
+    font-size: 1.7rem;
+    color: var(--main-color);
+}
+
+.products .box-container .box .content .price{
+    color: var(--black);
+    font-size: 2.5rem;
+}
+
+.products .box-container .box .content .price span{
+    text-decoration: line-through;
+    font-weight: lighter;
+    font-size: 1.5rem;
+}
+
+.contact .icons-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.contact .icons-container .icons{
+    padding: 2.5rem;
+    text-align: center;
+    border: var(--boder);
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+
+.contact .icons-container .icons i{
+    height: 6rem;
+    width: 6rem;
+    line-height: 6rem;
+    font-size: 2.5rem;
+    color: var(--main-color);
+    background: var(--black);
+    border-radius: 50%;
+}
+
+.contact .icons-container .icons h3{
+    color: var(--black);
+    padding: 1rem 0;
+    font-size: 2.5rem;
+}
+
+.contact .icons-container .icons p{
+    color: var(--black);
+    line-height: 1.8;
+    font-size: 1.5rem;
+}
+
+.contact .row{
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.contact .row .map{
+    flex: 1 1 45rem;
+    width: 100%;
+    padding: 2rem;
+    border: var(--boder);
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+    border-radius: .5rem;
+}
+
+.contact .row form{
+    flex: 1 1 45rem;
+    padding: 2rem;
+    border: var(--boder);
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+    border-radius: .5rem;
+}
+
+.contact .row form .box{
+    margin: .7rem 0;
+    padding: 1rem;
+    font-size: 1.6rem;
+    color: var(--black);
+    border-radius: .5rem;
+    border: var(--boder);
+    background: #fff;
+    text-transform: none;
+    width: 100%;
+}
+
+.contact .row form .box:focus{
+    background: var(--bg);
+}
+
+.contact .row form .btn:hover{
+    background: var(--black);
+}
+
+  .credit {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 15px;
+    color: #f5ba1a;
+  }
+  .credit a {
+    color: #e1a70a;
+  }
+
+
+.footer{
+    background: var(--main-color);
+    text-align: center;
+}
+
+.footer .credit{
+    font-size: 2rem;
+    color: var(--black);
+    font-weight: .7rem;
+    padding: 1.5rem;
+}
+
+.footer .credit span{
+    color: #669966;
+}
+
+
+
+
+
+
+
+
+
+
